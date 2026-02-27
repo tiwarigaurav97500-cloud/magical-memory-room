@@ -1,0 +1,106 @@
+/* --- GENERAL --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --- DOOR PAGE --- */
+.door-page {
+    background: #000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.door-container {
+    position: relative;
+    perspective: 1000px;
+}
+
+.door {
+    width: 270px;
+    cursor: pointer;
+    transition: transform 1.8s ease;
+    transform-origin: left;
+}
+
+.door.open {
+    transform: rotateY(-90deg);
+}
+
+.glow {
+    position: absolute;
+    width: 300px;
+    height: 430px;
+    top: -20px;
+    left: -15px;
+    opacity: 0.7;
+    filter: blur(4px);
+}
+
+/* --- ROOM PAGE --- */
+.room-page {
+    background: url("https://i.ibb.co/vVHdGzC/magical-room-bg.jpg");
+    background-size: cover;
+    height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+.fade-in {
+    animation: fade 1.5s ease;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.room-title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.audio-buttons button,
+.controls button {
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    backdrop-filter: blur(3px);
+}
+
+/* --- TRANSCRIPT BOX --- */
+.transcript-box {
+    margin: 40px auto;
+    width: 80%;
+    background: rgba(0,0,0,0.55);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid pink;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { border-color: pink; }
+    to { border-color: violet; }
+}
+
+#typingText {
+    font-size: 18px;
+    line-height: 1.6;
+    min-height: 100px;
+}
