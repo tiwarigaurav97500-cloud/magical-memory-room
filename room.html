@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Memory Room</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="room-page">
+
+    <div class="fade-in">
+        <h2 class="room-title">Welcome to Your Magical Room ✨</h2>
+
+        <p class="note">Choose a memory to listen…</p>
+
+        <div class="audio-buttons">
+            <button onclick="playAudio('miss_you')">❤️ Miss You</button>
+            <button onclick="playAudio('sad')">💧 Sad</button>
+            <button onclick="playAudio('overthinking')">🧠 Overthinking</button>
+            <button onclick="playAudio('self_doubt')">🌙 Self Doubt</button>
+            <button onclick="playAudio('crying')">😢 Crying</button>
+        </div>
+
+        <div class="controls">
+            <button onclick="toggleAudio()">▶️ / ⏸</button>
+            <button onclick="stopAudio()">⏹ Stop</button>
+        </div>
+
+        <div class="transcript-box">
+            <h3>📝 Transcript</h3>
+            <p id="typingText"></p>
+        </div>
+    </div>
+
+    <audio id="player"></audio>
+    <script src="script.js"></script>
+
+</body>
+</html>
