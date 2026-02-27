@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Magical Memory Room</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="door-page">
+
+    <h1 class="title">Magical Memory Room</h1>
+
+    <div class="door-container">
+        <img src="https://i.ibb.co/K2Lx4n0/magic-door.png" class="door" id="door" onclick="openDoor()">
+        <img src="https://i.ibb.co/0Ff3pXw/light-glow.png" class="glow">
+    </div>
+
+    <script>
+        function openDoor() {
+            const door = document.getElementById('door');
+            door.classList.add('open');
+
+            setTimeout(() => {
+                window.location.href = "room.html";
+            }, 1800);
+        }
+    </script>
+
+</body>
+</html>
